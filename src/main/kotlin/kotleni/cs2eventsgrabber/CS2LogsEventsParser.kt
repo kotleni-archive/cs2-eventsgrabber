@@ -18,7 +18,7 @@ class CS2LogsEventsParser(val file: File) {
             if(lastContent.isEmpty())
                 lastContent = text
 
-            if(lastContent != text) {
+            if(lastContent != text && text.isNotEmpty() && text.length > lastContent.length) {
                 val newContent = text.substring(lastContent.length)
                 lastContent = text
                 parse(newContent)
