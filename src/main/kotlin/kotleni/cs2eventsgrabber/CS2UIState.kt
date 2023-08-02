@@ -1,0 +1,8 @@
+package kotleni.cs2eventsgrabber
+
+enum class CS2UIState(val value: String) {
+    LOADING("CSGO_GAME_UI_STATE_LOADINGSCREEN"),
+    MAIN_MENU("CSGO_GAME_UI_STATE_MAINMENU"),
+    IN_GAME("CSGO_GAME_UI_STATE_INGAME"),
+    PAUSE_MENU("CSGO_GAME_UI_STATE_PAUSEMENU")
+}
