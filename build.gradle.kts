@@ -26,3 +26,17 @@ tasks.withType<KotlinCompile> {
 tasks.test {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "kotleni.cs2eventsgrabber"
+            artifactId = "kotleni.cs2eventsgrabber"
+            version = "1.0-alpha"
+
+            afterEvaluate {
+                from(components["java"])
+            }
+        }
+    }
+}
