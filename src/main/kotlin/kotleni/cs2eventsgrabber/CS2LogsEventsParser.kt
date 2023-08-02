@@ -47,6 +47,9 @@ class CS2LogsEventsParser(val file: File) {
                 if(it.contains("error: \"Failed to ready up\"")) {
                     eventsListener?.onSearchConfirmFailed()
                 }
+                if(it.contains("error: \"Stopped by user\"")) {
+                    eventsListener?.onSearchCanceled()
+                }
                 if(it.contains("_v2_MatchmakingGC2ClientReserve,")) {
                     eventsListener?.onSearchFound()
                 }

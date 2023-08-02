@@ -16,6 +16,10 @@ class MainTest {
                 println("onSearchStarted()")
             }
 
+            override fun onSearchCanceled() {
+                println("onSearchCanceled()")
+            }
+
             override fun onSearchFound() {
                 println("onSearchFound()")
             }

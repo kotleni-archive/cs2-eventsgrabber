@@ -7,6 +7,11 @@ interface CS2EventsListener {
     fun onSearchStarted()
 
     /**
+    * Called when search canceled
+    **/
+    fun onSearchCanceled()
+
+    /**
     * Called when search found
     **/
     fun onSearchFound()
