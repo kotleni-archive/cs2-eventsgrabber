@@ -83,12 +83,12 @@ class CS2LogsEventsParser(val file: File) {
                         eventsListener?.onUIStateChanged(CS2UIState.MAIN_MENU)
                     CS2Match.isLoaded = false
                 }
-                if(it.contains("-> CSGO_GAME_UI_STATE_INGAME")) { // BUG: invoked multiple times
+                if(it.contains("-> CSGO_GAME_UI_STATE_INGAME")) {
                     if(CS2Match.state != CS2UIState.IN_GAME)
                         eventsListener?.onUIStateChanged(CS2UIState.IN_GAME)
                     CS2Match.isPaused = false
                 }
-                if(it.contains("-> CSGO_GAME_UI_STATE_PAUSEMENU")) { // BUG: invoked multiple times
+                if(it.contains("-> CSGO_GAME_UI_STATE_PAUSEMENU")) {
                     if(CS2Match.state != CS2UIState.PAUSE_MENU)
                         eventsListener?.onUIStateChanged(CS2UIState.PAUSE_MENU)
                     CS2Match.isPaused = true
